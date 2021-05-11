@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 2
-  Percepcao: 5
+  Percepcao: 10
   HealthBar: {fileID: 7010960880566044161}
   CoinsPrefab: {fileID: 2786343458161351660, guid: 279607b058a4e8d47b47a4d4666cb706, type: 3}
   SoundDead: {fileID: 6182145265060289807, guid: 8c193071f3870a74383a9cf5744cce56, type: 3}

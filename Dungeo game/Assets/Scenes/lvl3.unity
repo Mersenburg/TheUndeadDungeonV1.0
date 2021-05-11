@@ -133,7 +133,7 @@ PrefabInstance:
     - target: {fileID: 2363838164994503297, guid: 3aeebc3cc2450bb418285f50e35b46b3, type: 3}
       propertyPath: objPrefab
       value: 
-      objectReference: {fileID: 2674780742529817891, guid: a0bf150f420acfc47952575da142c654, type: 3}
+      objectReference: {fileID: 8667389452677128474, guid: 03a89c3daec8bb04dabc3642e19439e8, type: 3}
     - target: {fileID: 2363838164994503324, guid: 3aeebc3cc2450bb418285f50e35b46b3, type: 3}
       propertyPath: m_Name
       value: Chest
@@ -1225,7 +1225,7 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 0.7
+    width: 0.8
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
