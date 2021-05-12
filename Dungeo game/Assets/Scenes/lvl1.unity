@@ -24321,6 +24321,7 @@ MonoBehaviour:
   PausePannel: {fileID: 1471615452187590584}
   OptionsPannel: {fileID: 0}
   ControlPannel: {fileID: 1472529471}
+  ContinuePannel: {fileID: 0}
   DeadPannel: {fileID: 1340341212298581476}
   NextLevelPannel: {fileID: 3122972915985145863}
   FinalLevelPannel: {fileID: 0}
@@ -29513,11 +29514,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3902589167817514785, guid: 642a92170f3edcb40833a8f060880f31, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -114.55653
+      value: -114.44
       objectReference: {fileID: 0}
     - target: {fileID: 3902589167817514785, guid: 642a92170f3edcb40833a8f060880f31, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.589024
+      value: 11.569023
       objectReference: {fileID: 0}
     - target: {fileID: 3902589167817514785, guid: 642a92170f3edcb40833a8f060880f31, type: 3}
       propertyPath: m_LocalPosition.z

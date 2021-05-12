@@ -153,7 +153,7 @@ MonoBehaviour:
   Percepcao: 10
   HealthBar: {fileID: 205363098498847928}
   CoinsPrefab: {fileID: 2786343458161351660, guid: 279607b058a4e8d47b47a4d4666cb706, type: 3}
-  SoundDead: {fileID: 6182145265060289807, guid: 8c193071f3870a74383a9cf5744cce56, type: 3}
+  SoundDead: {fileID: 6182145265060289807, guid: d1f7f2093ae721445b0f4e7437611d3c, type: 3}
   SoundHit: {fileID: 3108963165536038023, guid: 1083fbfabaa60464db7068000d1f216e, type: 3}
   MaxLife: 10
   CurrentLife: 10

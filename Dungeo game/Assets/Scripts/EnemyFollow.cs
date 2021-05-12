@@ -61,7 +61,7 @@ public class EnemyFollow : MonoBehaviour
             GameObject coins = Instantiate(CoinsPrefab, SpawnPoint.position, SpawnPoint.rotation);
         }
         GameObject Sound = Instantiate(SoundDead, transform.position, Quaternion.identity);
-        Destroy(Sound, 0.5f);
+        Destroy(Sound, 2f);
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
