@@ -152,6 +152,10 @@ public class GameController : MonoBehaviour
     {
         SceneManager.LoadScene(NextL);
         Time.timeScale = 1;
+        /*if(thislevel == 1)
+        {
+            load == 2
+        }*/
     }
     public void FinalLevel()
     {
@@ -248,4 +252,16 @@ public class GameController : MonoBehaviour
         arrows += 50;
         PlayerPrefs.SetInt("Arrows", arrows);*/
     } 
+    /*public void Scene()
+    {
+        if(load  = 1)
+        {
+            lvl1Pannel.SetActive(true);
+        }
+        else if(load <= 2)
+        {
+            lvl1Pannel.SetActive(true);
+            lvl2Pannel.SetActive(true);
+        }
+    }*/
 }
