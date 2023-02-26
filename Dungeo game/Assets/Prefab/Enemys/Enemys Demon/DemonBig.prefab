@@ -12,7 +12,7 @@ GameObject:
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -64,6 +64,7 @@ Transform:
   m_Children:
   - {fileID: 205363098020421698}
   - {fileID: 1957973885}
+  - {fileID: 5304680062708894952}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -153,11 +154,13 @@ MonoBehaviour:
   Percepcao: 5
   HealthBar: {fileID: 205363098498847928}
   CoinsPrefab: {fileID: 2786343458161351660, guid: 279607b058a4e8d47b47a4d4666cb706, type: 3}
+  ArrowsPrefab: {fileID: 6374945905718527516, guid: bc6d513ed0b53c0488567c4ad381b2e3, type: 3}
   SoundDead: {fileID: 6182145265060289807, guid: 8c193071f3870a74383a9cf5744cce56, type: 3}
   SoundHit: {fileID: 3108963165536038023, guid: 1083fbfabaa60464db7068000d1f216e, type: 3}
   MaxLife: 10
   CurrentLife: 10
   SpawnPoint: {fileID: 1957973885}
+  SpawnPoint2: {fileID: 5304680062708894952}
 --- !u!61 &960280322523861026
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -205,6 +208,36 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!1 &1327840447309165982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5304680062708894952}
+  m_Layer: 0
+  m_Name: SpawnPoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5304680062708894952
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327840447309165982}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.16, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 960280322523861024}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &69964777
 PrefabInstance:
   m_ObjectHideFlags: 0

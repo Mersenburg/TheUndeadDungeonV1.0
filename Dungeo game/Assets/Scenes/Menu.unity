@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &31471829 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8303639924414775300, guid: 4c2fc4867b7c73a45abfe70a1d36b704, type: 3}
+  m_PrefabInstance: {fileID: 7179352833633538014}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &46483475 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4232284069893555742, guid: c28090ff70cdc1f4daebdcbca33b4fee, type: 3}
@@ -1413,11 +1424,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 1529312032}
+  ArrowsText: {fileID: 31471829}
   CurrentDamage: {fileID: 1185958268839369158}
   CurrentFov: {fileID: 5885464868147447625}
   CurrentSpeed: {fileID: 3996091716105581517}
   Fov: {fileID: 466678531}
   TotalCoins: 0
+  TotalArrows: 0
   FOV: 0
   Speed: 0
   Run: 0
@@ -2118,6 +2131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CurrentFov
       objectReference: {fileID: 0}
+    - target: {fileID: 3286066429367818144, guid: a23067cdedf9b574ebcbf548c1ff3296, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8504276325911448312, guid: a23067cdedf9b574ebcbf548c1ff3296, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2694,18 +2711,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2053553218}
     m_Modifications:
+    - target: {fileID: 296969490, guid: 4c2fc4867b7c73a45abfe70a1d36b704, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1335925647}
     - target: {fileID: 385012170, guid: 4c2fc4867b7c73a45abfe70a1d36b704, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1335925645}
+    - target: {fileID: 491788248, guid: 4c2fc4867b7c73a45abfe70a1d36b704, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1335925647}
     - target: {fileID: 917529848, guid: 4c2fc4867b7c73a45abfe70a1d36b704, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1335925645}
-    - target: {fileID: 1072354663, guid: 4c2fc4867b7c73a45abfe70a1d36b704, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -1.5
-      objectReference: {fileID: 0}
     - target: {fileID: 1072354664, guid: 4c2fc4867b7c73a45abfe70a1d36b704, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2801,10 +2822,6 @@ PrefabInstance:
     - target: {fileID: 26968705138758239, guid: 4c2fc4867b7c73a45abfe70a1d36b704, type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 567057522270009779, guid: 4c2fc4867b7c73a45abfe70a1d36b704, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2861912123270354667, guid: 4c2fc4867b7c73a45abfe70a1d36b704, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

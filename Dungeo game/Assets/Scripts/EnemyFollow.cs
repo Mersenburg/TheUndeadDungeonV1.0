@@ -8,6 +8,7 @@ public class EnemyFollow : MonoBehaviour
     public float Percepcao;
     public GameObject HealthBar; 
     public GameObject CoinsPrefab;
+    public GameObject ArrowsPrefab;
     public GameObject SoundDead;
     public GameObject SoundHit;
     public int MaxLife;
@@ -15,6 +16,7 @@ public class EnemyFollow : MonoBehaviour
     float DamageArrow = 1;
     private Transform Target;
     public Transform SpawnPoint;
+    public Transform SpawnPoint2;
     private Animator anim;
     private Rigidbody2D rig;
     private BoxCollider2D box;
@@ -59,6 +61,7 @@ public class EnemyFollow : MonoBehaviour
             box.enabled = false;
             Destroy(gameObject, 0.5f);
             GameObject coins = Instantiate(CoinsPrefab, SpawnPoint.position, SpawnPoint.rotation);
+            GameObject Arrow = Instantiate(ArrowsPrefab, SpawnPoint2.position, SpawnPoint2.rotation);
         }
         GameObject Sound = Instantiate(SoundDead, transform.position, Quaternion.identity);
         Destroy(Sound, 0.5f);

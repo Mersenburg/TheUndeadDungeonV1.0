@@ -8,12 +8,14 @@ using Cinemachine;
 public class Store : MonoBehaviour
 {
     public Text ScoreText;
+    public Text ArrowsText;
     public Text CurrentDamage;
     public Text CurrentFov;
     public Text CurrentSpeed;
     public static Store instance;
     public CinemachineVirtualCamera Fov;
     public int TotalCoins;
+    public int TotalArrows;
     public float FOV;
     public float Speed;
     public float Run;
@@ -22,10 +24,12 @@ public class Store : MonoBehaviour
     {
         instance = this;
         
-        FOV = PlayerPrefs.GetFloat("FOV", 7);
+        FOV = PlayerPrefs.GetFloat("FOV", 4);
         Fov.m_Lens.OrthographicSize = FOV;
         
         TotalCoins = PlayerPrefs.GetInt("Coins");
+
+        TotalArrows = PlayerPrefs.GetInt("Arrows", 20);
         
         ArrowDamage = PlayerPrefs.GetFloat("ArrowDamage" , 1);
 
@@ -36,7 +40,9 @@ public class Store : MonoBehaviour
     }
     public void Update()
     { 
+        TotalArrows = PlayerPrefs.GetInt("Arrows", 100);
         ScoreText.text = TotalCoins.ToString();
+        ArrowsText.text = TotalArrows.ToString();
     }
     // Update is called once per frame
     public void UpgradeDamage()
@@ -58,6 +64,44 @@ public class Store : MonoBehaviour
     {
         TotalCoins++;
         PlayerPrefs.SetInt("Coins", TotalCoins);
+    }
+    public void UpdateArrowsText()
+    {
+        TotalArrows--;
+        PlayerPrefs.SetInt("Arrows", TotalArrows);
+    }
+    public void UpdateArrowsText10()
+    {
+        if(TotalCoins >= 5)
+       {
+           TotalCoins -= 5;
+           TotalArrows += 10;
+           PlayerPrefs.SetInt("Arrows", TotalArrows);
+           PlayerPrefs.SetInt("Coins", TotalCoins);
+       }
+       else
+       {
+           GameController.instance.ShowNoMoney();
+       }        
+    }
+        public void UpdateArrowsText100()
+    {
+        if(TotalCoins >= 50)
+       {
+           TotalCoins -= 50;
+           TotalArrows += 100;
+           PlayerPrefs.SetInt("Arrows", TotalArrows);
+           PlayerPrefs.SetInt("Coins", TotalCoins);
+       }
+       else
+       {
+           GameController.instance.ShowNoMoney();
+       }        
+    }
+    public void UpdateArrowsText1()
+    {
+        TotalArrows += 5;
+        PlayerPrefs.SetInt("Arrows", TotalArrows);
     }
     public void UpdateScore100()
     {

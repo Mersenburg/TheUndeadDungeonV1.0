@@ -64,6 +64,7 @@ Transform:
   m_Children:
   - {fileID: 8907067140166873102}
   - {fileID: 1975913921}
+  - {fileID: 5463673985947557029}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -153,11 +154,13 @@ MonoBehaviour:
   Percepcao: 10
   HealthBar: {fileID: 8907067140913693940}
   CoinsPrefab: {fileID: 110024696290732235, guid: 75c0615b04b7b0e40b2f6c8321006ab2, type: 3}
+  ArrowsPrefab: {fileID: 6374945905718527516, guid: bc6d513ed0b53c0488567c4ad381b2e3, type: 3}
   SoundDead: {fileID: 6182145265060289807, guid: 8c193071f3870a74383a9cf5744cce56, type: 3}
   SoundHit: {fileID: 2742296525300997788, guid: 892d044d15fee684b9fda63a15e45918, type: 3}
   MaxLife: 1
   CurrentLife: 1
   SpawnPoint: {fileID: 1975913921}
+  SpawnPoint2: {fileID: 5463673985947557029}
 --- !u!61 &5537430280017292045
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -205,6 +208,36 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!1 &2862515471896820829
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5463673985947557029}
+  m_Layer: 0
+  m_Name: SpawnPoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5463673985947557029
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2862515471896820829}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.3333334, y: 1.3333334, z: 1.3333334}
+  m_Children: []
+  m_Father: {fileID: 5754883853686864106}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &8738631415490659237
 PrefabInstance:
   m_ObjectHideFlags: 0

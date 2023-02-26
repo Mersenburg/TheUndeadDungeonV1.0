@@ -9,37 +9,51 @@ public class Doors : MonoBehaviour
     //public Transform SpawnPoint;
     public GameObject Door;
     private bool opened;
+    private bool contact = false;
     private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
     }
+    public void Update()
+    {
+        if(contact == true && opened == false)
+        {
+            Open();
+        }
+        if(contact == true && opened == true)
+        {
+            Close();
+        }
+    }
     void OnTriggerStay2D(Collider2D collider)
     {
         if (collider.gameObject.layer == 7 && opened == false)
         {
             GameController.instance.ShowImageF();
-            if(Input.GetKeyDown(KeyCode.F))
+            contact = true;
+            /*if(Input.GetKeyDown(KeyCode.F))
             {  
                 Door.SetActive(false);
                 opened = true;
                 anim.SetBool("Close", true);
                 anim.SetBool("Open", false);
                 GameController.instance.unShowImageF();
-            }
+            }*/
         }
         if (collider.gameObject.layer == 7 && opened == true)
         {
             GameController.instance.ShowImageE();
-            if(Input.GetKeyDown(KeyCode.E))
+            contact = true;
+                /*if(Input.GetKeyDown(KeyCode.E))
             {  
                 Door.SetActive(true);
                 opened = false;
                 anim.SetBool("Open", true);
                 anim.SetBool("Close", false);
                 GameController.instance.unShowImageE();
-            }
+            }*/
         }
     }
      
@@ -50,5 +64,28 @@ public class Doors : MonoBehaviour
             GameController.instance.unShowImageF();
             GameController.instance.unShowImageE();
         }
+    }
+    void Open()
+    {
+            if(Input.GetKeyDown(KeyCode.F))
+                {  
+                    Door.SetActive(false);
+                    opened = true;
+                    anim.SetBool("Close", true);
+                    anim.SetBool("Open", false);
+                    GameController.instance.unShowImageF();
+                }
+    }
+    void Close()
+    {
+            if(Input.GetKeyDown(KeyCode.E))
+            {  
+                Door.SetActive(true);
+                opened = false;
+                anim.SetBool("Open", true);
+                anim.SetBool("Close", false);
+                GameController.instance.unShowImageE();
+            }
+        
     }
 }

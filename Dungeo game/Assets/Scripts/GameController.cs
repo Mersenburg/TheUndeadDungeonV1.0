@@ -29,11 +29,19 @@ public class GameController : MonoBehaviour
     public string cena;
     public string NextL;
     public string ThisLevel;
+    //public int arrows;
     
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
+    }
+    void Update()
+    {
+        if(Input.GetKey(KeyCode.Escape))
+        {
+            ShowPause();
+        }    
     }
     public void ShowImageF()
     {
@@ -127,8 +135,8 @@ public class GameController : MonoBehaviour
     }
     public void QuitGame()
     {
-        //UnityEditor.EditorApplication.isPlaying = false;
-        Application.Quit();
+        UnityEditor.EditorApplication.isPlaying = false;
+        //Application.Quit();
     }
     public void StartGame()
     {
@@ -154,11 +162,13 @@ public class GameController : MonoBehaviour
     public void ShowNextLevel()
     {
         NextLevelPannel.SetActive(true);
+        Arrows();
     }
     public void RestartLevel()
     {
         SceneManager.LoadScene(ThisLevel);
         Time.timeScale = 1;
+        Arrows();
     }
     public void ShowControls()
     {
@@ -214,10 +224,28 @@ public class GameController : MonoBehaviour
     public void ShowDead()
     {
         DeadPannel.SetActive(true);
+        Arrows();
     }
     public void DeleteData()
     {
         PlayerPrefs.DeleteAll();
         SceneManager.LoadScene("Menu");
     }
+    public void unShowArrows()
+    {
+        DamagePannel.SetActive(false);
+    }
+    public void Arrows()
+    {
+        int arrows;
+        arrows = PlayerPrefs.GetInt("Arrows");
+        if(arrows < 25 )
+        {
+            arrows += 100;
+            PlayerPrefs.SetInt("Arrows", arrows);
+        }
+        /*arrows = PlayerPrefs.GetInt("Arrows");
+        arrows += 50;
+        PlayerPrefs.SetInt("Arrows", arrows);*/
+    } 
 }

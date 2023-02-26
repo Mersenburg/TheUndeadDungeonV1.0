@@ -10,6 +10,7 @@ public class Chest : MonoBehaviour
     public GameObject objPrefab;
     public GameObject SoundOpen;
     private bool opened = false;
+    private bool contact = false;
     private bool Spawned = false;
     private float Timer = 1;
     
@@ -30,21 +31,17 @@ public class Chest : MonoBehaviour
                 Spawned = false;
             }
         }
+        if(contact == true && opened == false)
+        {
+            Open();
+        }
     }
     void OnTriggerStay2D(Collider2D collider)
     {
         if (collider.gameObject.layer == 7 && opened == false)
         {
             GameController.instance.ShowImageF();
-            if(Input.GetKeyDown(KeyCode.F))
-            {
-                GameObject Sound = Instantiate(SoundOpen, transform.position, Quaternion.identity);
-                Destroy(Sound, 1f);
-                opened = true;
-                Spawned = true;
-                anim.SetTrigger("Open");
-                GameController.instance.ShowImageF();
-            }  
+            contact = true;
         }
     }
     void OnTriggerExit2D(Collider2D collider)
@@ -52,6 +49,19 @@ public class Chest : MonoBehaviour
         if (collider.gameObject.layer == 7)
         {
             GameController.instance.unShowImageF();
+        }
+    }
+    void Open()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            GameObject Sound = Instantiate(SoundOpen, transform.position, Quaternion.identity);
+            Destroy(Sound, 1f);
+            opened = true;
+            Spawned = true;
+            contact = false;
+            anim.SetTrigger("Open");
+            GameController.instance.ShowImageF();
         }
     }
 }
