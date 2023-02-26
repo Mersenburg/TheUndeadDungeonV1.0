@@ -61,6 +61,7 @@ public class Doors : MonoBehaviour
     {
         if (collider.gameObject.layer == 7)
         {
+            contact = false;
             GameController.instance.unShowImageF();
             GameController.instance.unShowImageE();
         }
